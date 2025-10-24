@@ -4,10 +4,9 @@ A full-stack web app to manage credit information efficiently — featuring user
 
 ## 🚀 Tech Stack
 
-* **Frontend:** React (Vite / CRA)
+* **Frontend:** React 
 * **Backend:** Node.js + Express
-* **Database:** MongoDB (Atlas / Local)
-* **Auth:** JWT
+* **Database:** MongoDB (Atlas)
 
 ## ⚙️ Setup
 
@@ -35,15 +34,6 @@ npm start               # or npm run dev (Vite)
 
 Frontend runs on **[http://localhost:3000](http://localhost:3000)**  →  Backend on **[http://localhost:5000](http://localhost:5000)**
 
-## 🌐 API Endpoints
-
-| Method | Endpoint         | Description       |
-| ------ | ---------------- | ----------------- |
-| POST   | /api/auth/login  | Login & get JWT   |
-| GET    | /api/credits     | Fetch all credits |
-| POST   | /api/credits     | Add new credit    |
-| PUT    | /api/credits/:id | Update credit     |
-| DELETE | /api/credits/:id | Delete credit     |
 
 ## 🧩 Features
 
@@ -54,8 +44,8 @@ Frontend runs on **[http://localhost:3000](http://localhost:3000)**  →  Backen
 
 ## 🛠️ Deployment
 
-* **Frontend:** Vercel / Netlify
-* **Backend:** Render / Railway
+* **Frontend:** Vercel 
+* **Backend:** Render 
 * **DB:** MongoDB Atlas
 
 ## 🤝 Contributing
