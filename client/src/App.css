@@ -1,0 +1,108 @@
+/* App.css — dark theme polished UI */
+
+:root{
+  --bg:#0f1113;
+  --card:#121318;
+  --muted:#9aa3b2;
+  --accent:#6ee7b7;
+  --accent-2:#8ab4f8;
+  --surface:#1a1f24;
+  --danger:#ff6b6b;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #07070a 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* layout */
+.container{max-width:1100px;margin:28px auto;padding:0 18px}
+.app-header{border-bottom:1px solid rgba(255,255,255,0.03);position:sticky;top:0;background:linear-gradient(180deg, rgba(15,17,19,0.9), rgba(15,17,19,0.6));backdrop-filter: blur(6px);z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#042;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.title{margin:0;font-size:18px}
+.subtitle{font-size:12px;color:var(--muted);margin-top:2px}
+.nav a{color:var(--muted);text-decoration:none;margin-left:12px}
+.nav-link{color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:6px}
+.nav-link:hover{background:var(--glass);color:#fff}
+
+/* top row */
+.top-row{display:flex;gap:18px;align-items:flex-start}
+.upload-card{flex:1;min-width:320px}
+.recent-box{width:320px;max-width:320px;background:var(--card);border-radius:12px;padding:16px}
+.recent-title{margin:0 0 8px 0}
+.recent-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.recent-item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));}
+
+/* cards */
+.card{background:var(--card);border-radius:12px;padding:16px;box-shadow: 0 6px 18px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+.upload-form .file-input input{display:none}
+.file-placeholder{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px;border-radius:10px;border:1px dashed rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));cursor:pointer}
+.drop-icon{font-size:28px}
+.file-text{font-weight:600}
+.foot{margin-top:8px}
+
+/* buttons */
+.btn{border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#042}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.btn.danger{background:linear-gradient(90deg,var(--danger),#ff4b4b);color:#111}
+
+/* upload row */
+.upload-row{display:flex;gap:8px;margin-top:12px;align-items:center}
+.error{color:#ff8b8b;margin-top:8px;font-size:13px}
+
+/* report card */
+.report-card{margin-top:18px;padding:18px}
+.report-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.report-name{margin:0;font-size:18px}
+.pan{color:var(--muted);font-weight:600;font-size:13px;margin-left:8px}
+.report-actions{display:flex;gap:8px;align-items:center}
+.score-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.score{font-size:14px;color:var(--muted)}
+.metrics-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:14px}
+.metric{background:var(--surface);padding:12px;border-radius:10px;text-align:left;border:1px solid rgba(255,255,255,0.02)}
+.metric-value{font-size:16px;font-weight:700}
+.metric-label{font-size:12px;color:var(--muted);margin-top:6px}
+
+/* accounts table */
+.accounts-section{margin-top:18px}
+.accounts-table-wrap{overflow:auto;border-radius:8px}
+.accounts-table{width:100%;border-collapse:collapse;min-width:800px}
+.accounts-table thead th{background:rgba(255,255,255,0.02);text-align:left;padding:10px 12px;font-size:13px;color:var(--muted);position:sticky;top:0}
+.accounts-table tbody td{padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
+.accounts-table tbody tr:hover{background:rgba(255,255,255,0.01)}
+
+/* mobile stacked account cards */
+.accounts-cards{display:none}
+.acc-card{background:var(--surface);padding:12px;border-radius:10px;margin-top:8px}
+.acc-row{display:flex;justify-content:space-between;align-items:center}
+.acc-stats{margin-top:8px;font-weight:600}
+
+/* empty state */
+.empty-state{padding:40px;text-align:center;color:var(--muted);font-size:15px}
+
+/* misc */
+.muted{color:var(--muted)}
+.small{font-size:12px}
+.link{background:transparent;border:none;color:var(--accent-2);cursor:pointer}
+
+/* footer */
+.footer{padding:18px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:36px}
+
+/* responsiveness */
+@media (max-width: 900px){
+  .top-row{flex-direction:column}
+  .recent-box{width:100%;max-width:100%}
+  .accounts-table{min-width:650px}
+  .accounts-cards{display:block}
+  .accounts-table-wrap{display:none}
+}
